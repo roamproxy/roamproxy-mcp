@@ -1,0 +1,45 @@
+{
+  "name": "roamproxy-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for RoamProxy: let AI agents fetch pages and get proxies through residential, datacenter and mobile IPs in 190+ countries.",
+  "mcpName": "io.github.roamproxy/roamproxy-mcp",
+  "type": "module",
+  "bin": {
+    "roamproxy-mcp": "src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "proxy",
+    "residential-proxy",
+    "web-scraping",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "roamproxy"
+  ],
+  "homepage": "https://roamproxy.com/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roamproxy/roamproxy-mcp.git"
+  },
+  "bugs": "https://github.com/roamproxy/roamproxy-mcp/issues",
+  "license": "MIT",
+  "author": "RoamProxy <dev@roamproxy.com>",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "turndown": "^7.2.4",
+    "undici": "^7.16.0",
+    "zod": "^3.25.76"
+  }
+}

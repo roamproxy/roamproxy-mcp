@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.roamproxy/roamproxy-mcp",
+  "title": "RoamProxy",
+  "description": "Fetch pages and get proxies via residential, datacenter and mobile IPs in 190+ countries.",
+  "repository": {
+    "url": "https://github.com/roamproxy/roamproxy-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://roamproxy.com/mcp",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "roamproxy-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ROAM_API_TOKEN",
+          "description": "Your RoamProxy API token (member dashboard > Rotating residential > API)",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
