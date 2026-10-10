@@ -6,7 +6,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { Roam, RoamError, renderBody } from "./roam.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.1.1";
 const roam = new Roam(process.env.ROAM_API_TOKEN);
 
 const geo = {

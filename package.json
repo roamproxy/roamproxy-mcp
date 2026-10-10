@@ -1,6 +1,6 @@
 {
   "name": "roamproxy-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for RoamProxy: let AI agents fetch pages and get proxies through residential, datacenter and mobile IPs in 190+ countries.",
   "mcpName": "io.github.roamproxy/roamproxy-mcp",
   "type": "module",

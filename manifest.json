@@ -2,7 +2,7 @@
   "manifest_version": "0.2",
   "name": "roamproxy-mcp",
   "display_name": "RoamProxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fetch pages and get proxies through residential, datacenter and mobile IPs in 190+ countries.",
   "long_description": "Lets Claude browse the web through your RoamProxy account: fetch any URL from a residential IP in a chosen country, state or city, build proxy URLs for Playwright/curl/antidetect browsers, verify the exit IP, and check your balance. Traffic is billed to your RoamProxy wallet as usual.",
   "author": {
