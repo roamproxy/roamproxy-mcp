@@ -1,0 +1,78 @@
+{
+  "manifest_version": "0.2",
+  "name": "roamproxy-mcp",
+  "display_name": "RoamProxy",
+  "version": "0.1.0",
+  "description": "Fetch pages and get proxies through residential, datacenter and mobile IPs in 190+ countries.",
+  "long_description": "Lets Claude browse the web through your RoamProxy account: fetch any URL from a residential IP in a chosen country, state or city, build proxy URLs for Playwright/curl/antidetect browsers, verify the exit IP, and check your balance. Traffic is billed to your RoamProxy wallet as usual.",
+  "author": {
+    "name": "RoamProxy",
+    "email": "dev@roamproxy.com",
+    "url": "https://roamproxy.com"
+  },
+  "homepage": "https://roamproxy.com/mcp",
+  "documentation": "https://github.com/roamproxy/roamproxy-mcp#readme",
+  "support": "https://github.com/roamproxy/roamproxy-mcp/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roamproxy/roamproxy-mcp"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {
+        "ROAM_API_TOKEN": "${user_config.api_token}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL through a RoamProxy IP in the chosen country/state/city"
+    },
+    {
+      "name": "get_proxy",
+      "description": "Build a ready-to-use http/socks5 proxy URL for any geo, rotating or sticky"
+    },
+    {
+      "name": "check_ip",
+      "description": "Show the exit IP, city and ISP for a geo/session"
+    },
+    {
+      "name": "account_status",
+      "description": "Wallet balance, prices, 7-day usage and static IPs"
+    }
+  ],
+  "user_config": {
+    "api_token": {
+      "type": "string",
+      "title": "RoamProxy API token",
+      "description": "From the member dashboard: Rotating residential page, API section",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "keywords": [
+    "proxy",
+    "residential-proxy",
+    "web-scraping",
+    "geo"
+  ],
+  "license": "MIT",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=20.18.1"
+    }
+  }
+}
